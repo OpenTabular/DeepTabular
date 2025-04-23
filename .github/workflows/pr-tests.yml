@@ -1,45 +1,48 @@
 name: PR Unit Tests
 
 on:
+  workflow_dispatch: 
   pull_request:
     branches:
       - develop
       - master  # Add any other branches where you want to enforce tests
 
+concurrency:
+  group: pytest-${{ github.head_ref || github.sha }}
+  cancel-in-progress: true
+
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Install Poetry
+        uses: abatilo/actions-poetry@v4
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"  # Change this to match your setup
-      
-      - name: Install Poetry
-        run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
-          export PATH="$HOME/.local/bin:$PATH"
+          python-version: ${{ matrix.python-version }}
+          cache: 'poetry'
 
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          poetry install
-          pip install pytest
-
-      - name: Install Package Locally
-        run: |
-          poetry build
-          pip install dist/*.whl  # Install the built package to fix "No module named 'mambular'"
+          poetry install --with dev
 
       - name: Run Unit Tests
         env:
           PYTHONPATH: ${{ github.workspace }}  # Ensure the package is discoverable
-        run: pytest tests/
+        run: poetry run pytest tests/
+        shell: bash
 
       - name: Verify Tests Passed
         if: ${{ success() }}
