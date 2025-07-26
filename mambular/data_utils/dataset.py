@@ -24,10 +24,13 @@ class MambularDataset(Dataset):
         labels=None,
         regression=True,
     ):
+        assert cat_features_list or num_features_list
+        
         self.cat_features_list = cat_features_list  # Categorical features tensors
         self.num_features_list = num_features_list  # Numerical features tensors
         self.embeddings_list = embeddings_list  # Embeddings tensors (optional)
         self.regression = regression
+
 
         if labels is not None:
             if not self.regression:
