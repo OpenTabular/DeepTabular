@@ -31,7 +31,6 @@ class MambularDataset(Dataset):
         self.embeddings_list = embeddings_list  # Embeddings tensors (optional)
         self.regression = regression
 
-
         if labels is not None:
             if not self.regression:
                 self.num_classes = len(np.unique(labels))
