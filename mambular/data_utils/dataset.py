@@ -44,7 +44,7 @@ class MambularDataset(Dataset):
             self.labels = None  # No labels in prediction mode
 
     def __len__(self):
-        _feats = self.num_features_list if self.num_features_list else cat_features_list
+        _feats = self.num_features_list if self.num_features_list else self.cat_features_list
         return len(_feats[0])
 
     def __getitem__(self, idx):
