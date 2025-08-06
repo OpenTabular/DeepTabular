@@ -15,6 +15,7 @@ from .trompt import Trompt
 from .enode import ENODE
 from .tangos import Tangos
 from .modern_nca import ModernNCA
+from .trambular import Trambular
 
 __all__ = [
     "ModernNCA",
@@ -34,4 +35,5 @@ __all__ = [
     "TabM",
     "TabTransformer",
     "TabulaRNN",
+    "Trambular",
 ]

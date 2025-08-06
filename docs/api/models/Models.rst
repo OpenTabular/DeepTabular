@@ -145,6 +145,18 @@ mambular.models
     :members:
     :undoc-members:
 
+.. autoclass:: mambular.models.TrambularClassifier
+    :members:
+    :inherited-members:
+
+.. autoclass:: mambular.models.TrambularRegressor
+    :members:
+    :inherited-members:
+
+.. autoclass:: mambular.models.TrambularLSS
+    :members:
+    :undoc-members:
+
 .. autoclass:: mambular.models.SklearnBaseClassifier
     :members:
     :undoc-members:

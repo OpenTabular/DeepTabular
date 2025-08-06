@@ -30,6 +30,7 @@ from .trompt import TromptClassifier, TromptLSS, TromptRegressor
 from .enode import ENODEClassifier, ENODELSS, ENODERegressor
 from .tangos import TangosClassifier, TangosLSS, TangosRegressor
 from .modern_nca import ModernNCARegressor, ModernNCAClassifier, ModernNCALSS
+from .trambular import TrambularClassifier, TrambularLSS, TrambularRegressor
 
 __all__ = [
     "ModernNCARegressor",
@@ -86,4 +87,7 @@ __all__ = [
     "TabulaRNNClassifier",
     "TabulaRNNLSS",
     "TabulaRNNRegressor",
+    "TrambularClassifier",
+    "TrambularLSS",
+    "TrambularRegressor",
 ]

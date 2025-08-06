@@ -23,6 +23,7 @@ Modules                                       Description
 :class:`TabulaRNN`                            Recurrent neural network (RNN) model, including LSTM and GRU architectures, tailored for sequential or time-series tabular data.
 :class:`MambAttention`                        Attention-based architecture for tabular tasks, combining feature importance weighting with advanced normalization techniques.
 :class:`SAINT`                                SAINT model. Transformer based model using row and column attetion.
+:class:`Tabular`                              Tabular hybrid model combining Transfomer and Mamba architectures for additonal positional invariance.
 =========================================    =======================================================================================================
 
 
