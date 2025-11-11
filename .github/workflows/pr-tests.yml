@@ -34,7 +34,7 @@ jobs:
       - name: Install Package Locally
         run: |
           poetry build
-          pip install dist/*.whl  # Install the built package to fix "No module named 'mambular'"
+          pip install dist/*.whl  # Install the built package to fix "No module named 'deeptabular'"
 
       - name: Run Unit Tests
         env:

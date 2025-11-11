@@ -3,7 +3,7 @@
 Distributional
 ==============
 
-This example demonstrates how use Distributional from the `mambular` package.
+This example demonstrates how use Distributional from the `deeptabular` package.
 
 
 .. literalinclude:: ../../examples/example_distributional.py
