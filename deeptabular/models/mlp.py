@@ -14,7 +14,7 @@ class MLPRegressor(SklearnBaseRegressor):
         with the default MLP configuration.
         """,
         examples="""
-        >>> from mambular.models import MLPRegressor
+        >>> from deeptabular.models import MLPRegressor
         >>> model = MLPRegressor(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -34,7 +34,7 @@ class MLPClassifier(SklearnBaseClassifier):
         with the default MLP configuration.
         """,
         examples="""
-        >>> from mambular.models import MLPClassifier
+        >>> from deeptabular.models import MLPClassifier
         >>> model = MLPClassifier(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -54,7 +54,7 @@ class MLPLSS(SklearnBaseLSS):
         with the default MLP configuration.
         """,
         examples="""
-        >>> from mambular.models import MLPLSS
+        >>> from deeptabular.models import MLPLSS
         >>> model = MLPLSS(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train, family='normal')
         >>> preds = model.predict(X_test)

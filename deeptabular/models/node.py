@@ -14,7 +14,7 @@ class NODERegressor(SklearnBaseRegressor):
         with the default NODE configuration.
         """,
         examples="""
-        >>> from mambular.models import NODERegressor
+        >>> from deeptabular.models import NODERegressor
         >>> model = NODERegressor()
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -35,7 +35,7 @@ class NODEClassifier(SklearnBaseClassifier):
         with the default NODE configuration.
         """,
         examples="""
-        >>> from mambular.models import NODEClassifier
+        >>> from deeptabular.models import NODEClassifier
         >>> model = NODEClassifier()
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -56,7 +56,7 @@ class NODELSS(SklearnBaseLSS):
         with the default NODE configuration.
         """,
         examples="""
-        >>> from mambular.models import NODELSS
+        >>> from deeptabular.models import NODELSS
         >>> model = NODELSS()
         >>> model.fit(X_train, y_train, family='normal')
         >>> preds = model.predict(X_test)
