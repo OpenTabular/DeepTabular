@@ -94,7 +94,7 @@ Hence, they are available as e.g. `MambularRegressor`, `MambularClassifier` or `
 
 # 📚 Documentation
 
-You can find the Mamba-Tabular API documentation [here](https://mambular.readthedocs.io/en/latest/).
+You can find the DeepTabular API documentation [here](https://deeptabular.readthedocs.io/en/latest/).
 
 # 🛠️ Installation
 
@@ -392,30 +392,6 @@ Here's how you can implement a custom model with DeepTabular:
 
    regressor.evaluate(X_test, y_test)
    ```
-
-
-
-# 🏷️ Citation
-
-If you find this project useful in your research, please consider cite:
-```BibTeX
-@article{thielmann2024mambular,
-  title={Mambular: A Sequential Model for Tabular Deep Learning},
-  author={Thielmann, Anton Frederik and Kumar, Manish and Weisser, Christoph and Reuter, Arik and S{\"a}fken, Benjamin and Samiee, Soheila},
-  journal={arXiv preprint arXiv:2408.06291},
-  year={2024}
-}
-```
-
-If you use TabulaRNN please consider to cite:
-```BibTeX
-@article{thielmann2024efficiency,
-  title={On the Efficiency of NLP-Inspired Methods for Tabular Deep Learning},
-  author={Thielmann, Anton Frederik and Samiee, Soheila},
-  journal={arXiv preprint arXiv:2411.17207},
-  year={2024}
-}
-```
 
 
 
