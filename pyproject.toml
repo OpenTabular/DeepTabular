@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "mambular"
+name = "deeptabular"
 
-version = "1.5.1"
+version = "1.6.0"
 
 
 description = "A python package for tabular deep learning with mamba blocks."
 authors = ["Anton Thielmann", "Manish Kumar", "Christoph Weisser"]
 readme = "README.md"
-packages = [{ include = "mambular" }]
+packages = [{ include = "deeptabular" }]
 
 [build-system]
 requires = ["poetry-core"]
@@ -38,10 +38,10 @@ docformatter = "^1.4"
 
 
 [tool.poetry.urls]
-homepage = "https://github.com/basf/mamba-tabular"
-documentation = "https://mambular.readthedocs.io/en/"
-repository = "https://github.com/basf/mamba-tabular"
-package = "https://pypi.org/project/mambular/"
+homepage = "https://github.com/OpenTabular/DeepTabular"
+documentation = "https://deeptabular.readthedocs.io/"
+repository = "https://github.com/OpenTabular/DeepTabular"
+package = "https://pypi.org/project/deeptabular/"
 
 
 # code quality tools
@@ -57,7 +57,7 @@ venv = ".venv"
 [tool.ruff]
 line-length = 120
 target-version = "py310"
-exclude = ["*.ipynb", "mambular/arch_utils/mamba_utils.mamba_orginal.py"]
+exclude = ["*.ipynb", "deeptabular/arch_utils/mamba_utils.mamba_orginal.py"]
 
 [tool.ruff.lint]
 select = [
