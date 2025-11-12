@@ -14,7 +14,7 @@ class MambAttentionRegressor(SklearnBaseRegressor):
         with the default MambAttention configuration.
         """,
         examples="""
-        >>> from mambular.models import MambAttentionRegressor
+        >>> from deeptabular.models import MambAttentionRegressor
         >>> model = MambAttentionRegressor(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)

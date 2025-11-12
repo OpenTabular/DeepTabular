@@ -14,7 +14,7 @@ class TangosRegressor(SklearnBaseRegressor):
         with the default Tangos configuration.
         """,
         examples="""
-        >>> from mambular.models import TangosRegressor
+        >>> from deeptabular.models import TangosRegressor
         >>> model = TangosRegressor(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -34,7 +34,7 @@ class TangosClassifier(SklearnBaseClassifier):
         with the default Tangos configuration.
         """,
         examples="""
-        >>> from mambular.models import TangosClassifier
+        >>> from deeptabular.models import TangosClassifier
         >>> model = TangosClassifier(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -54,7 +54,7 @@ class TangosLSS(SklearnBaseLSS):
         with the default Tangos configuration.
         """,
         examples="""
-        >>> from mambular.models import TangosLSS
+        >>> from deeptabular.models import TangosLSS
         >>> model = TangosLSS(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train, family='normal')
         >>> preds = model.predict(X_test)

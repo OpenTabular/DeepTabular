@@ -15,7 +15,7 @@ class FTTransformerRegressor(SklearnBaseRegressor):
         configuration.
         """,
         examples="""
-        >>> from mambular.models import FTTransformerRegressor
+        >>> from deeptabular.models import FTTransformerRegressor
         >>> model = FTTransformerRegressor(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -35,7 +35,7 @@ class FTTransformerClassifier(SklearnBaseClassifier):
         """FTTransformer Classifier. This class extends the SklearnBaseClassifier class
         and uses the FTTransformer model with the default FTTransformer configuration.""",
         examples="""
-        >>> from mambular.models import FTTransformerClassifier
+        >>> from deeptabular.models import FTTransformerClassifier
         >>> model = FTTransformerClassifier(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -56,7 +56,7 @@ class FTTransformerLSS(SklearnBaseLSS):
         This class extends the SklearnBaseLSS class and uses the
         FTTransformer model with the default FTTransformer configuration.""",
         examples="""
-        >>> from mambular.models import FTTransformerLSS
+        >>> from deeptabular.models import FTTransformerLSS
         >>> model = FTTransformerLSS(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train, family="normal")
         >>> preds = model.predict(X_test)
