@@ -15,7 +15,7 @@ class AutoIntRegressor(SklearnBaseRegressor):
         configuration.
         """,
         examples="""
-        >>> from mambular.models import AutoIntRegressor
+        >>> from deeptabular.models import AutoIntRegressor
         >>> model = AutoIntRegressor(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -33,7 +33,7 @@ class AutoIntClassifier(SklearnBaseClassifier):
         """AutoInt Classifier. This class extends the SklearnBaseClassifier class
         and uses the AutoInt model with the default AutoInt configuration.""",
         examples="""
-        >>> from mambular.models import AutoIntClassifier
+        >>> from deeptabular.models import AutoIntClassifier
         >>> model = AutoIntClassifier(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -52,7 +52,7 @@ class AutoIntLSS(SklearnBaseLSS):
         This class extends the SklearnBaseLSS class and uses the
         AutoInt model with the default AutoInt configuration.""",
         examples="""
-        >>> from mambular.models import AutoIntLSS
+        >>> from deeptabular.models import AutoIntLSS
         >>> model = AutoIntLSS(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train, family="normal")
         >>> preds = model.predict(X_test)

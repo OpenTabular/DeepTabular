@@ -1,35 +1,35 @@
-mambular.base_models
-====================
+deeptabular.base_models
+=======================
 
-.. autoclass:: mambular.base_models.BaseModel
+.. autoclass:: deeptabular.base_models.BaseModel
     :members:
     :no-inherited-members:
 
-.. autoclass:: mambular.base_models.TaskModel
+.. autoclass:: deeptabular.base_models.TaskModel
     :members:
     :no-inherited-members:
 
-.. autoclass:: mambular.base_models.Mambular
+.. autoclass:: deeptabular.base_models.Mambular
     :members:
     :no-inherited-members:
 
-.. autoclass:: mambular.base_models.MLP
+.. autoclass:: deeptabular.base_models.MLP
     :members:
     :no-inherited-members:
 
-.. autoclass:: mambular.base_models.ResNet
+.. autoclass:: deeptabular.base_models.ResNet
     :members:
     :no-inherited-members:
 
-.. autoclass:: mambular.base_models.FTTransformer
+.. autoclass:: deeptabular.base_models.FTTransformer
     :members:
     :no-inherited-members:
 
-.. autoclass:: mambular.base_models.TabTransformer
+.. autoclass:: deeptabular.base_models.TabTransformer
     :members:
     :no-inherited-members:
 
-.. autoclass:: mambular.base_models.TabulaRNN
+.. autoclass:: deeptabular.base_models.TabulaRNN
     :members:
     :no-inherited-members:
 

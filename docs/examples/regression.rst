@@ -3,7 +3,7 @@
 Regression
 ==========
 
-This example demonstrates how use Regression module from the `mambular` package.
+This example demonstrates how use Regression module from the `deeptabular` package.
 
 
 .. literalinclude:: ../../examples/example_regression.py

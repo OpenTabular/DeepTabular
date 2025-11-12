@@ -15,7 +15,7 @@ class TabulaRNNRegressor(SklearnBaseRegressor):
         configuration.
         """,
         examples="""
-        >>> from mambular.models import TabulaRNNRegressor
+        >>> from deeptabular.models import TabulaRNNRegressor
         >>> model = TabulaRNNRegressor(d_model=64)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -36,7 +36,7 @@ class TabulaRNNClassifier(SklearnBaseClassifier):
         configuration.
         """,
         examples="""
-        >>> from mambular.models import TabulaRNNClassifier
+        >>> from deeptabular.models import TabulaRNNClassifier
         >>> model = TabulaRNNClassifier(d_model=64)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)

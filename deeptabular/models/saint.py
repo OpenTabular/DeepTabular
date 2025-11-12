@@ -15,7 +15,7 @@ class SAINTRegressor(SklearnBaseRegressor):
         configuration.
         """,
         examples="""
-        >>> from mambular.models import SAINTRegressor
+        >>> from deeptabular.models import SAINTRegressor
         >>> model = SAINTRegressor(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -33,7 +33,7 @@ class SAINTClassifier(SklearnBaseClassifier):
         """SAINT Classifier. This class extends the SklearnBaseClassifier class
         and uses the SAINT model with the default SAINT configuration.""",
         examples="""
-        >>> from mambular.models import SAINTClassifier
+        >>> from deeptabular.models import SAINTClassifier
         >>> model = SAINTClassifier(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -52,7 +52,7 @@ class SAINTLSS(SklearnBaseLSS):
         This class extends the SklearnBaseLSS class and uses the
         SAINT model with the default SAINT configuration.""",
         examples="""
-        >>> from mambular.models import SAINTLSS
+        >>> from deeptabular.models import SAINTLSS
         >>> model = SAINTLSS(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train, family="normal")
         >>> preds = model.predict(X_test)

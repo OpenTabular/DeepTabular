@@ -4,13 +4,13 @@ import importlib
 import os
 import dataclasses
 import typing
-from mambular.configs.base_config import BaseConfig  # Ensure correct path
+from deeptabular.configs.base_config import BaseConfig  # Ensure correct path
 
-CONFIG_MODULE_PATH = "mambular.configs"
+CONFIG_MODULE_PATH = "deeptabular.configs"
 config_classes = []
 
-# Discover all config classes in mambular/configs/
-for filename in os.listdir(os.path.dirname(__file__) + "/../mambular/configs"):
+# Discover all config classes in deeptabular/configs/
+for filename in os.listdir(os.path.dirname(__file__) + "/../deeptabular/configs"):
     if (
         filename.endswith(".py")
         and filename != "base_config.py"

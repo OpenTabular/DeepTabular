@@ -14,7 +14,7 @@ class ResNetRegressor(SklearnBaseRegressor):
         with the default ResNet configuration.
         """,
         examples="""
-        >>> from mambular.models import ResNetRegressor
+        >>> from deeptabular.models import ResNetRegressor
         >>> model = ResNetRegressor()
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -34,7 +34,7 @@ class ResNetClassifier(SklearnBaseClassifier):
         with the default ResNet configuration.
         """,
         examples="""
-        >>> from mambular.models import ResNetClassifier
+        >>> from deeptabular.models import ResNetClassifier
         >>> model = ResNetClassifier()
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -54,7 +54,7 @@ class ResNetLSS(SklearnBaseLSS):
         with the default ResNet configuration.
         """,
         examples="""
-        >>> from mambular.models import ResNetLSS
+        >>> from deeptabular.models import ResNetLSS
         >>> model = ResNetLSS()
         >>> model.fit(X_train, y_train, family='normal')
         >>> preds = model.predict(X_test)

@@ -14,7 +14,7 @@ class ENODERegressor(SklearnBaseRegressor):
         with the default ENODE configuration.
         """,
         examples="""
-        >>> from mambular.models import ENODERegressor
+        >>> from deeptabular.models import ENODERegressor
         >>> model = ENODERegressor()
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -35,7 +35,7 @@ class ENODEClassifier(SklearnBaseClassifier):
         with the default ENODE configuration.
         """,
         examples="""
-        >>> from mambular.models import ENODEClassifier
+        >>> from deeptabular.models import ENODEClassifier
         >>> model = ENODEClassifier()
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -56,7 +56,7 @@ class ENODELSS(SklearnBaseLSS):
         with the default ENODE configuration.
         """,
         examples="""
-        >>> from mambular.models import ENODELSS
+        >>> from deeptabular.models import ENODELSS
         >>> model = ENODELSS()
         >>> model.fit(X_train, y_train, family='normal')
         >>> preds = model.predict(X_test)
