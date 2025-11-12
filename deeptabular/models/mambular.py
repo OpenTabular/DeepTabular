@@ -14,7 +14,7 @@ class MambularRegressor(SklearnBaseRegressor):
         with the default Mambular configuration.
         """,
         examples="""
-        >>> from mambular.models import MambularRegressor
+        >>> from deeptabular.models import MambularRegressor
         >>> model = MambularRegressor(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -34,7 +34,7 @@ class MambularClassifier(SklearnBaseClassifier):
         with the default Mambular configuration.
         """,
         examples="""
-        >>> from mambular.models import MambularClassifier
+        >>> from deeptabular.models import MambularClassifier
         >>> model = MambularClassifier(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -54,7 +54,7 @@ class MambularLSS(SklearnBaseLSS):
         with the default Mambular configuration.
         """,
         examples="""
-        >>> from mambular.models import MambularLSS
+        >>> from deeptabular.models import MambularLSS
         >>> model = MambularLSS(d_model=64, n_layers=8)
         >>> model.fit(X_train, y_train, family='normal')
         >>> preds = model.predict(X_test)

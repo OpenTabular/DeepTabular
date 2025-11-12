@@ -14,7 +14,7 @@ class TabTransformerRegressor(SklearnBaseRegressor):
         with the default TabTransformer configuration.
         """,
         examples="""
-        >>> from mambular.models import TabTransformerRegressor
+        >>> from deeptabular.models import TabTransformerRegressor
         >>> model = TabTransformerRegressor()
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -36,7 +36,7 @@ class TabTransformerClassifier(SklearnBaseClassifier):
         with the default TabTransformer configuration.
         """,
         examples="""
-        >>> from mambular.models import TabTransformerClassifier
+        >>> from deeptabular.models import TabTransformerClassifier
         >>> model = TabTransformerClassifier()
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -58,7 +58,7 @@ class TabTransformerLSS(SklearnBaseLSS):
         with the default TabTransformer configuration.
         """,
         examples="""
-        >>> from mambular.models import TabTransformerLSS
+        >>> from deeptabular.models import TabTransformerLSS
         >>> model = TabTransformerLSS()
         >>> model.fit(X_train, y_train, family='normal')
         >>> preds = model.predict(X_test)

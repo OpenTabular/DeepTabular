@@ -14,7 +14,7 @@ class TabRRegressor(SklearnBaseRegressor):
         with the default TabR configuration.
         """,
         examples="""
-        >>> from mambular.models import TabRRegressor
+        >>> from deeptabular.models import TabRRegressor
         >>> model = TabRRegressor()
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -33,7 +33,7 @@ class TabRClassifier(SklearnBaseClassifier):
         with the default TabR configuration.
         """,
         examples="""
-        >>> from mambular.models import TabRClassifier
+        >>> from deeptabular.models import TabRClassifier
         >>> model = TabRClassifier()
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -52,7 +52,7 @@ class TabRLSS(SklearnBaseLSS):
         with the default TabR configuration.
         """,
         examples="""
-        >>> from mambular.models import TabRLSS
+        >>> from deeptabular.models import TabRLSS
         >>> model = TabRLSS(d_model=64, family='normal')
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)

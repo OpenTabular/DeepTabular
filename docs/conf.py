@@ -11,13 +11,13 @@ import sys
 
 sys.path.insert(0, os.path.abspath("."))
 sys.path.insert(0, os.path.abspath("../"))
-sys.path.insert(1, os.path.dirname(os.path.abspath("../")) + os.sep + "mambular")
+sys.path.insert(1, os.path.dirname(os.path.abspath("../")) + os.sep + "deeptabular")
 
-project = "mambular"
+project = "deeptabular"
 project_copyright = "2024, BASF SE"
 author = "Anton Frederik Thielmann, Manish Kumar, Christoph Weisser, Benjamin Saefken, Soheila Samiee"
 
-VERSION_PATH = "../mambular/__version__.py"
+VERSION_PATH = "../deeptabular/__version__.py"
 with open(VERSION_PATH) as f:
     lines = f.readlines()
     for line in lines:

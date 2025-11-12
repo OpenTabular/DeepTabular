@@ -14,7 +14,7 @@ class TabMRegressor(SklearnBaseRegressor):
         with the default TabM configuration.
         """,
         examples="""
-        >>> from mambular.models import TabMRegressor
+        >>> from deeptabular.models import TabMRegressor
         >>> model = TabMRegressor(ensemble_size=32, model_type='full')
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -34,7 +34,7 @@ class TabMClassifier(SklearnBaseClassifier):
         with the default TabM configuration.
         """,
         examples="""
-        >>> from mambular.models import TabMClassifier
+        >>> from deeptabular.models import TabMClassifier
         >>> model = TabMClassifier(ensemble_size=32, model_type='full')
         >>> model.fit(X_train, y_train)
         >>> preds = model.predict(X_test)
@@ -54,7 +54,7 @@ class TabMLSS(SklearnBaseLSS):
         with the default TabM configuration.
         """,
         examples="""
-        >>> from mambular.models import TabMLSS
+        >>> from deeptabular.models import TabMLSS
         >>> model = TabMLSS(ensemble_size=32, model_type='full')
         >>> model.fit(X_train, y_train, family='normal')
         >>> preds = model.predict(X_test)
