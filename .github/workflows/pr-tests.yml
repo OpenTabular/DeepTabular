@@ -34,21 +34,10 @@ jobs:
           cache: 'poetry'
 
       - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          poetry install
-          pip install pytest
-
-      - name: Install Package Locally
-        run: |
-          poetry build
-          pip install dist/*.whl  # Install the built package to fix "No module named 'deeptab'"
+        run: poetry install
 
       - name: Run Unit Tests
-        env:
-          PYTHONPATH: ${{ github.workspace }}  # Ensure the package is discoverable
-        run: poetry run pytest tests/
-        shell: bash
+        run: poetry run pytest tests/ -v
 
       - name: Verify Tests Passed
         if: ${{ success() }}
