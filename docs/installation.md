@@ -1,11 +1,11 @@
 ## Installation
 
-Please follow the steps below for installing `deeptabular`.
+Please follow the steps below for installing `deeptab`.
 
 ### Install from the source:
 
 ```bash
-cd DeepTabular
+cd deeptab
 
 poetry install
 ```
@@ -16,7 +16,7 @@ Note: Make sure you in the same directory where `pyproject.toml` file resides.
 The package is available on PyPi. You can install it using the following command:
 
 ```bash
-pip install -U deeptabular
+pip install -U deeptab
 ```
 
-PyPi link: [deeptabular](https://pypi.org/project/deeptabular/)
+PyPi link: [deeptab](https://pypi.org/project/deeptab/)

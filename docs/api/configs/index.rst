@@ -1,11 +1,11 @@
 .. -*- mode: rst -*-
 
-.. currentmodule:: deeptabular.configs
+.. currentmodule:: deeptab.configs
 
 Configurations
 ==============
 
-This module provides default configurations for DeepTabular models. Each configuration is implemented as a dataclass, offering a structured way to define model-specific hyperparameters.
+This module provides default configurations for deeptab models. Each configuration is implemented as a dataclass, offering a structured way to define model-specific hyperparameters.
 
 Mambular
 --------

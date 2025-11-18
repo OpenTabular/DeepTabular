@@ -1,19 +1,19 @@
 # Build and release
 
-The document outlines the steps to build and release the `deeptabular` package. At this point, it is assumed that the development and testing of the package have been completed successfully.
+The document outlines the steps to build and release the `deeptab` package. At this point, it is assumed that the development and testing of the package have been completed successfully.
 
 ## 1. Test documentation
 It is expected from the contributor to update the documentation as an when required along side the change in source code. Please use the below process to test the documentation:
 
 ```sh
-cd DeepTabular/docs/
+cd deeptab/docs/
 
 make doctest
 ```
 Fix any docstring related issue, then proceed with next steps.
 
 ## 2. Version update
-The package version is mantained in `deeptabular/__version__.py` and `pyproject.toml` file. Increment the version according to the changes such as patch, minor, major or all.
+The package version is mantained in `deeptab/__version__.py` and `pyproject.toml` file. Increment the version according to the changes such as patch, minor, major or all.
 
 - The version number should be in the format `major.minor.patch`. For example, `1.0.1`.
 
@@ -24,7 +24,7 @@ The package version is mantained in `deeptabular/__version__.py` and `pyproject.
 
 - Create a pull request from your `feature` branch to the `develop` branch.
 - Once the pull request is approved and merged to develop. The maintainer will test the package and documentation. If everything is fine, the maintainer will proceed further to merge the changed to `master` and `release` branch.
-- Ideally content of `master` and `release` branch should be same. The `release` branch is used to publish the package to PyPi while `master` branch is used to publish the documentation to readthedocs and can be accesseed at [deeptabular.readthedocs.io](https://deeptabular.readthedocs.io/en/latest/).
+- Ideally content of `master` and `release` branch should be same. The `release` branch is used to publish the package to PyPi while `master` branch is used to publish the documentation to readthedocs and can be accesseed at [deeptab.readthedocs.io](https://deeptab.readthedocs.io/en/latest/).
 
 
 ## 4. Publish package to PyPi

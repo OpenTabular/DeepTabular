@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-from deeptabular.models import MambularClassifier
+from deeptab.models import MambularClassifier
 
 # Set random seed for reproducibility
 np.random.seed(0)
