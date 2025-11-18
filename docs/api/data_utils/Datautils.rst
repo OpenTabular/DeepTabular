@@ -1,8 +1,8 @@
-deeptabular.data_utils
+deeptab.data_utils
 ======================
 
-.. autoclass:: deeptabular.data_utils.MambularDataset
+.. autoclass:: deeptab.data_utils.MambularDataset
     :members:
 
-.. autoclass:: deeptabular.data_utils.MambularDataModule
+.. autoclass:: deeptab.data_utils.MambularDataModule
     :members:
