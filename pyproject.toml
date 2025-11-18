@@ -4,7 +4,7 @@ name = "deeptab"
 version = "1.6.0"
 
 
-description = "A python package for tabular deep learning with mamba blocks."
+description = "A python package for tabular deep learning."
 authors = ["Anton Thielmann", "Manish Kumar", "Christoph Weisser"]
 readme = "README.md"
 packages = [{ include = "deeptab" }]
