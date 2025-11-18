@@ -22,7 +22,7 @@ If applicable, add screenshots to help explain your problem.
 **Desktop (please complete the following information):**
  - OS: [e.g. Ubuntu]
  - Python version [e.g. 3.8]
- - DeepTabular Version [e.g. 1.6.0]
+ - deeptab Version [e.g. 1.6.0]
 
 **Additional context**
 Add any other context about the problem here.

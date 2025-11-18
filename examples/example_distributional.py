@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-from deeptabular.models import MambularLSS
+from deeptab.models import MambularLSS
 
 # Set random seed for reproducibility
 np.random.seed(0)
