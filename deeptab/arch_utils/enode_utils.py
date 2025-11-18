@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from deeptabular.arch_utils.layer_utils.sparsemax import sparsemax, sparsemoid
+from deeptab.arch_utils.layer_utils.sparsemax import sparsemax, sparsemoid
 from .data_aware_initialization import ModuleWithInit
 from .numpy_utils import check_numpy
 import numpy as np
