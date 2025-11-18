@@ -42,7 +42,7 @@ jobs:
       - name: Install Package Locally
         run: |
           poetry build
-          pip install dist/*.whl  # Install the built package to fix "No module named 'deeptabular'"
+          pip install dist/*.whl  # Install the built package to fix "No module named 'deeptab'"
 
       - name: Run Unit Tests
         env:

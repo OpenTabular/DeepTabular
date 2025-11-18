@@ -4,13 +4,13 @@ import importlib
 import os
 import dataclasses
 import typing
-from deeptabular.configs.base_config import BaseConfig  # Ensure correct path
+from deeptab.configs.base_config import BaseConfig  # Ensure correct path
 
-CONFIG_MODULE_PATH = "deeptabular.configs"
+CONFIG_MODULE_PATH = "deeptab.configs"
 config_classes = []
 
-# Discover all config classes in deeptabular/configs/
-for filename in os.listdir(os.path.dirname(__file__) + "/../deeptabular/configs"):
+# Discover all config classes in deeptab/configs/
+for filename in os.listdir(os.path.dirname(__file__) + "/../deeptab/configs"):
     if (
         filename.endswith(".py")
         and filename != "base_config.py"

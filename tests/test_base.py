@@ -3,16 +3,16 @@ import inspect
 import torch
 import os
 import importlib
-from deeptabular.base_models.utils import BaseModel
+from deeptab.base_models.utils import BaseModel
 
 # Paths for models and configs
-MODEL_MODULE_PATH = "deeptabular.base_models"
-CONFIG_MODULE_PATH = "deeptabular.configs"
+MODEL_MODULE_PATH = "deeptab.base_models"
+CONFIG_MODULE_PATH = "deeptab.configs"
 EXCLUDED_CLASSES = {"TabR"}
 
 # Discover all models
 model_classes = []
-for filename in os.listdir(os.path.dirname(__file__) + "/../deeptabular/base_models"):
+for filename in os.listdir(os.path.dirname(__file__) + "/../deeptab/base_models"):
     if filename.endswith(".py") and filename not in [
         "__init__.py",
         "basemodel.py",

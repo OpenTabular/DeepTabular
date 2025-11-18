@@ -1,13 +1,13 @@
-# DeepTabular: Tabular Deep Learning Made Simple
+# deeptab: Tabular Deep Learning Made Simple
 
-DeepTabular is a Python library for tabular deep learning. It includes models that leverage the Mamba (State Space Model) architecture, as well as other popular models like TabTransformer, FTTransformer, TabM and tabular ResNets. Check out our paper `Mambular: A Sequential Model for Tabular Deep Learning`, available [here](https://arxiv.org/abs/2408.06291). Also check out our paper introducing [TabulaRNN](https://arxiv.org/pdf/2411.17207) and analyzing the efficiency of NLP inspired tabular models.
+deeptab is a Python library for tabular deep learning. It includes models that leverage the Mamba (State Space Model) architecture, as well as other popular models like TabTransformer, FTTransformer, TabM and tabular ResNets. Check out our paper `Mambular: A Sequential Model for Tabular Deep Learning`, available [here](https://arxiv.org/abs/2408.06291). Also check out our paper introducing [TabulaRNN](https://arxiv.org/pdf/2411.17207) and analyzing the efficiency of NLP inspired tabular models.
 
 
 # 🏃 Quickstart
-Similar to any sklearn model, DeepTabular models can be fit as easy as this:
+Similar to any sklearn model, deeptab models can be fit as easy as this:
 
 ```python
-from deeptabular.models import MambularClassifier
+from deeptab.models import MambularClassifier
 # Initialize and fit your model
 model = MambularClassifier()
 
@@ -16,7 +16,7 @@ model.fit(X, y, max_epochs=150, lr=1e-04)
 ```
 
 # 📖 Introduction
-DeepTabular is a Python package that brings the power of advanced deep learning architectures to tabular data, offering a suite of models for regression, classification, and distributional regression tasks. Designed with ease of use in mind, DeepTabular models adhere to scikit-learn's `BaseEstimator` interface, making them highly compatible with the familiar scikit-learn ecosystem. This means you can fit, predict, and evaluate using DeepTabular models just as you would with any traditional scikit-learn model, but with the added performance and flexibility of deep learning.
+deeptab is a Python package that brings the power of advanced deep learning architectures to tabular data, offering a suite of models for regression, classification, and distributional regression tasks. Designed with ease of use in mind, deeptab models adhere to scikit-learn's `BaseEstimator` interface, making them highly compatible with the familiar scikit-learn ecosystem. This means you can fit, predict, and evaluate using deeptab models just as you would with any traditional scikit-learn model, but with the added performance and flexibility of deep learning.
 
 
 # 🤖 Models
@@ -44,13 +44,13 @@ Hence, they are available as e.g. `MambularRegressor`, `MambularClassifier` or `
 
 # 📚 Documentation
 
-You can find the DeepTabular API documentation [here](https://deeptabular.readthedocs.io/en/latest/).
+You can find the deeptab API documentation [here](https://deeptab.readthedocs.io/en/latest/).
 
 # 🛠️ Installation
 
-Install DeepTabular using pip:
+Install deeptab using pip:
 ```sh
-pip install deeptabular
+pip install deeptab
 ```
 
 If you want to use the original mamba and mamba2 implementations, additionally install mamba-ssm via:
@@ -70,7 +70,7 @@ pip install mamba-ssm
 
 <h2> Preprocessing </h2>
 
-DeepTabular simplifies data preprocessing with a range of tools designed for easy transformation of tabular data.
+deeptab simplifies data preprocessing with a range of tools designed for easy transformation of tabular data.
 
 <h3> Data Type Detection and Transformation </h3>
 
@@ -90,10 +90,10 @@ DeepTabular simplifies data preprocessing with a range of tools designed for eas
 
 <h2> Fit a Model </h2>
 
-Fitting a model in deeptabular is as simple as it gets. All models in deeptabular are sklearn BaseEstimators. Thus, the `fit` method is implemented for all of them. Additionally, this allows for using all other sklearn inherent methods such as their built in hyperparameter optimization tools.
+Fitting a model in deeptab is as simple as it gets. All models in deeptab are sklearn BaseEstimators. Thus, the `fit` method is implemented for all of them. Additionally, this allows for using all other sklearn inherent methods such as their built in hyperparameter optimization tools.
 
 ```python
-from deeptabular.models import MambularClassifier
+from deeptab.models import MambularClassifier
 # Initialize and fit your model
 model = MambularClassifier(
     d_model=64,
@@ -171,12 +171,12 @@ Or use the built-in bayesian hpo simply by running:
 best_params = model.optimize_hparams(X, y)
 ```
 
-This automatically sets the search space based on the default config from ``deeptabular.configs``. See the documentation for all params with regard to ``optimize_hparams()``. However, the preprocessor arguments are fixed and cannot be optimized here.
+This automatically sets the search space based on the default config from ``deeptab.configs``. See the documentation for all params with regard to ``optimize_hparams()``. However, the preprocessor arguments are fixed and cannot be optimized here.
 
 
 <h2> ⚖️ Distributional Regression with MambularLSS </h2>
 
-MambularLSS allows you to model the full distribution of a response variable, not just its mean. This is crucial when understanding variability, skewness, or kurtosis is important. All DeepTabular models are available as distributional models.
+MambularLSS allows you to model the full distribution of a response variable, not just its mean. This is crucial when understanding variability, skewness, or kurtosis is important. All deeptab models are available as distributional models.
 
 <h3> Key Features of MambularLSS: </h3>
 
@@ -203,10 +203,10 @@ These distribution classes make MambularLSS versatile in modeling various data t
 
 <h3> Getting Started with MambularLSS: </h3>
 
-To integrate distributional regression into your workflow with `MambularLSS`, start by initializing the model with your desired configuration, similar to other DeepTabular models:
+To integrate distributional regression into your workflow with `MambularLSS`, start by initializing the model with your desired configuration, similar to other deeptab models:
 
 ```python
-from deeptabular.models import MambularLSS
+from deeptab.models import MambularLSS
 
 # Initialize the MambularLSS model
 model = MambularLSS(
@@ -231,11 +231,11 @@ model.fit(
 
 # 💻 Implement Your Own Model
 
-DeepTabular allows users to easily integrate their custom models into the existing logic. This process is designed to be straightforward, making it simple to create a PyTorch model and define its forward pass. Instead of inheriting from `nn.Module`, you inherit from DeepTabular's `BaseModel`. Each DeepTabular model takes three main arguments: the number of classes (e.g., 1 for regression or 2 for binary classification), `cat_feature_info`, and `num_feature_info` for categorical and numerical feature information, respectively. Additionally, you can provide a config argument, which can either be a custom configuration or one of the provided default configs.
+deeptab allows users to easily integrate their custom models into the existing logic. This process is designed to be straightforward, making it simple to create a PyTorch model and define its forward pass. Instead of inheriting from `nn.Module`, you inherit from deeptab's `BaseModel`. Each deeptab model takes three main arguments: the number of classes (e.g., 1 for regression or 2 for binary classification), `cat_feature_info`, and `num_feature_info` for categorical and numerical feature information, respectively. Additionally, you can provide a config argument, which can either be a custom configuration or one of the provided default configs.
 
-One of the key advantages of using DeepTabular is that the inputs to the forward passes are lists of tensors. While this might be unconventional, it is highly beneficial for models that treat different data types differently. For example, the TabTransformer model leverages this feature to handle categorical and numerical data separately, applying different transformations and processing steps to each type of data.
+One of the key advantages of using deeptab is that the inputs to the forward passes are lists of tensors. While this might be unconventional, it is highly beneficial for models that treat different data types differently. For example, the TabTransformer model leverages this feature to handle categorical and numerical data separately, applying different transformations and processing steps to each type of data.
 
-Here's how you can implement a custom model with DeepTabular:
+Here's how you can implement a custom model with deeptab:
 
 1. **First, define your config:**  
    The configuration class allows you to specify hyperparameters and other settings for your model. This can be done using a simple dataclass.
@@ -255,8 +255,8 @@ Here's how you can implement a custom model with DeepTabular:
    Define your custom model just as you would for an `nn.Module`. The main difference is that you will inherit from `BaseModel` and use the provided feature information to construct your layers. To integrate your model into the existing API, you only need to define the architecture and the forward pass.
 
    ```python
-   from deeptabular.base_models import BaseModel
-   from deeptabular.utils.get_feature_dimensions import get_feature_dimensions
+   from deeptab.base_models import BaseModel
+   from deeptab.utils.get_feature_dimensions import get_feature_dimensions
    import torch
    import torch.nn
 
@@ -285,11 +285,11 @@ Here's how you can implement a custom model with DeepTabular:
            return output
    ```
 
-3. **Leverage the DeepTabular API:**  
-   You can build a regression, classification, or distributional regression model that can leverage all of DeepTabular's built-in methods by using the following:
+3. **Leverage the deeptab API:**  
+   You can build a regression, classification, or distributional regression model that can leverage all of deeptab's built-in methods by using the following:
 
    ```python
-   from deeptabular.models import SklearnBaseRegressor
+   from deeptab.models import SklearnBaseRegressor
 
    class MyRegressor(SklearnBaseRegressor):
        def __init__(self, **kwargs):
@@ -297,7 +297,7 @@ Here's how you can implement a custom model with DeepTabular:
    ```
 
 4. **Train and evaluate your model:**  
-   You can now fit, evaluate, and predict with your custom model just like with any other DeepTabular model. For classification or distributional regression, inherit from `SklearnBaseClassifier` or `SklearnBaseLSS` respectively.
+   You can now fit, evaluate, and predict with your custom model just like with any other deeptab model. For classification or distributional regression, inherit from `SklearnBaseClassifier` or `SklearnBaseLSS` respectively.
 
    ```python
    regressor = MyRegressor(numerical_preprocessing="ple")
@@ -306,15 +306,15 @@ Here's how you can implement a custom model with DeepTabular:
 
 # Custom Training
 
-If you prefer to setup custom training, preprocessing and evaluation, you can simply use the `deeptabular.base_models`.
+If you prefer to setup custom training, preprocessing and evaluation, you can simply use the `deeptab.base_models`.
 Just be careful that all basemodels expect lists of features as inputs. More precisely as list for numerical features and a list for categorical features. A custom training loop, with random data could look like this.
 
 ```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from deeptabular.base_models import Mambular
-from deeptabular.configs import DefaultMambularConfig
+from deeptab.base_models import Mambular
+from deeptab.configs import DefaultMambularConfig
 
 # Dummy data and configuration
 cat_feature_info = {

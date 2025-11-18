@@ -1,6 +1,6 @@
 .. -*- mode: rst -*-
 
-.. currentmodule:: deeptabular.data_utils
+.. currentmodule:: deeptab.data_utils
 
 Data Utils
 ==========
