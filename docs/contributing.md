@@ -15,9 +15,9 @@ To set up the development environment for this Python package, follow these step
 1. Clone the repository to your local machine using the command:
 
 ```
-git clone https://github.com/basf/mamba-tabular
+git clone https://github.com/OpenTabular/DeepTab
 
-cd mamba-tabular
+cd DeepTab
 ```
 
 2. Install tools required for setting up development environment:
@@ -44,7 +44,7 @@ just install
 In case you are not able to install `just`, you can follow the below steps to set up the development environment:
 
 ```
-cd mamaba-tabular
+cd DeepTab
 
 poetry install
 
@@ -208,7 +208,7 @@ When submitting your contributions, please ensure the following:
 
 ### Issue Tracker
 
-If you encounter any bugs, have feature requests, or need assistance, please visit our [Issue Tracker](https://github.com/basf/mamba-tabular/issues). Make sure to search for existing issues before creating a new one.
+If you encounter any bugs, have feature requests, or need assistance, please visit our [Issue Tracker](https://github.com/OpenTabular/DeepTab/issues). Make sure to search for existing issues before creating a new one.
 
 ### License
 
