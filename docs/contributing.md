@@ -1,4 +1,3 @@
-
 ## Contribution Guidelines
 
 Thank you for considering contributing to our Python package! We appreciate your time and effort in helping us improve our project. Please take a moment to review the following guidelines to ensure a smooth and efficient contribution process.
@@ -60,25 +59,141 @@ pip install -r docs/requirements_docs.txt
 
 **Note:** You can also set up a virtual environment to isolate your development environment.
 
-
 ### How to Contribute
 
 1. Create a new branch from the `develop` branch for your contributions. Please use descriptive and concise branch names.
 2. Make your desired changes or additions to the codebase.
 3. Ensure that your code adheres to [PEP8](https://peps.python.org/pep-0008/) coding style guidelines.
 4. Write appropriate tests for your changes, ensuring that they pass.
-    - `make test`
+   - `make test`
 5. Update the documentation and examples, if necessary.
 6. Build the html documentation and verify if it works as expected. We have used Sphinx for documentation, you could build the documents as follows:
-    - `cd src/docs`
-    - `make clean`
-    - `make html`
+   - `cd src/docs`
+   - `make clean`
+   - `make html`
 7. Verify the html documents created under `docs/_build/html` directory. `index.html` file is the main file which contains link to all other files and doctree.
 
-8. Commit your changes with a clear and concise commit message.
+8. Commit your changes following the Conventional Commits specification (see below).
 9. Submit a pull request from your branch to the development branch of the original repository.
 10. Wait for the maintainers to review your pull request. Address any feedback or comments if required.
 11. Once approved, your changes will be merged into the main codebase.
+
+### Release Workflow
+
+This project uses automated semantic versioning and releases. Here's how releases work:
+
+#### Automated Release Process
+
+```
+1. Make Changes → 2. Conventional Commit → 3. Merge to Master → 4. Automated Release
+```
+
+**Step-by-Step:**
+
+1. **Development Phase**
+
+   - Create feature branch from `develop`
+   - Make your changes
+   - Commit using conventional commits (e.g., `feat:`, `fix:`)
+
+2. **Merge to Develop**
+
+   - Create PR to `develop` branch
+   - After review, merge to `develop`
+   - ReadTheDocs dev documentation updates automatically
+
+3. **Merge to Master** (Triggers Release)
+
+   - Merge `develop` to `master`
+   - GitHub Actions semantic-release workflow runs automatically
+
+4. **Automated Release (on Master)**
+   - ✅ Analyzes conventional commits since last release
+   - ✅ Determines version bump (major/minor/patch)
+   - ✅ Updates version in `pyproject.toml` and `__version__.py`
+   - ✅ Generates/updates `CHANGELOG.md`
+   - ✅ Creates git tag (e.g., `v1.7.0`)
+   - ✅ Builds package (`poetry build`)
+   - ✅ Publishes to PyPI
+   - ✅ Creates GitHub Release with notes
+
+#### What Triggers a Release?
+
+| Commit Type                                              | Version Bump  | PyPI Release |
+| -------------------------------------------------------- | ------------- | ------------ |
+| `feat:`                                                  | Minor (1.x.0) | ✅ Yes       |
+| `fix:`                                                   | Patch (1.6.x) | ✅ Yes       |
+| `perf:`                                                  | Patch (1.6.x) | ✅ Yes       |
+| `feat!:` or `BREAKING CHANGE:`                           | Major (x.0.0) | ✅ Yes       |
+| `docs:`, `style:`, `refactor:`, `test:`, `chore:`, `ci:` | None          | ❌ No        |
+
+#### Example Scenarios
+
+**Scenario 1: Documentation Update (No Release)**
+
+```bash
+git commit -m "docs: update API reference"
+# Merge to master → No version bump, no PyPI release
+```
+
+**Scenario 2: Bug Fix (Patch Release)**
+
+```bash
+git commit -m "fix: resolve memory leak in dataloader"
+# Merge to master → Version 1.6.1 → 1.6.2 → PyPI release
+```
+
+**Scenario 3: New Feature (Minor Release)**
+
+```bash
+git commit -m "feat(models): add TabNet architecture"
+# Merge to master → Version 1.6.1 → 1.7.0 → PyPI release
+```
+
+**Scenario 4: Breaking Change (Major Release)**
+
+```bash
+git commit -m "feat!: remove Python 3.9 support
+
+BREAKING CHANGE: Python 3.10 is now the minimum required version"
+# Merge to master → Version 1.6.1 → 2.0.0 → PyPI release
+```
+
+#### Important Notes
+
+- **Only master branch** triggers releases
+- **Semantic-release is fully automated** - no manual version bumping needed
+- **Never manually edit version numbers** in `pyproject.toml` or `deeptab/__version__.py` - they are automatically updated by semantic-release
+- **PyPI token** is configured in GitHub repository secrets
+- **Review commits carefully** before merging to master (they determine the version!)
+
+#### Working with Updated Versions
+
+**Q: What happens if I create a branch from `develop` after a release?**
+
+After a release is merged to `master`, the version files are updated automatically. To get the latest version:
+
+1. **Sync develop with master** (maintainers do this):
+
+   ```bash
+   git checkout develop
+   git merge master
+   git push origin develop
+   ```
+
+2. **Update your local develop branch** (before creating new branches):
+
+   ```bash
+   git checkout develop
+   git pull origin develop
+   ```
+
+3. **Create your feature branch from updated develop**:
+   ```bash
+   git checkout -b feature/my-new-feature
+   ```
+
+This ensures your branch has the correct version number as a starting point. Don't worry if the version seems "old" in your branch - semantic-release will calculate the correct new version based on commits when merging to master.
 
 ### Submitting Contributions
 

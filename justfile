@@ -32,3 +32,27 @@ lint:
 format:
     poetry run docformatter --in-place --recursive --wrap-summaries 120 --wrap-descriptions 120 .
     poetry run ruff format .
+
+# create a conventional commit using commitizen
+commit:
+    poetry run cz commit
+
+# bump version using commitizen
+bump:
+    poetry run cz bump
+
+# create a changelog
+changelog:
+    poetry run cz changelog
+
+# run semantic release (dry-run)
+release-dry:
+    poetry run semantic-release version --no-commit --no-tag --no-push
+
+# run semantic release
+release:
+    poetry run semantic-release version
+
+# publish release
+publish:
+    poetry run semantic-release publish
