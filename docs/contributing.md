@@ -169,31 +169,59 @@ BREAKING CHANGE: Python 3.10 is now the minimum required version"
 
 #### Working with Updated Versions
 
-**Q: What happens if I create a branch from `develop` after a release?**
+**Q: What happens to `develop` branch after a release?**
 
-After a release is merged to `master`, the version files are updated automatically. To get the latest version:
+After semantic-release completes on `master`, the version files are automatically updated. The `develop` branch syncs automatically:
 
-1. **Sync develop with master** (maintainers do this):
+**Automatic Sync Flow:**
 
-   ```bash
-   git checkout develop
-   git merge master
-   git push origin develop
-   ```
+```
+┌─────────────────────────────────────────────────────────────┐
+│              Release & Sync Process                         │
+└─────────────────────────────────────────────────────────────┘
 
-2. **Update your local develop branch** (before creating new branches):
+1. Merge develop → master
+   │
+   ▼
+2. Semantic Release runs on master
+   │
+   ├─→ Version: 1.6.1 → 1.7.0
+   ├─→ Update pyproject.toml
+   ├─→ Update __version__.py
+   ├─→ Update CHANGELOG.md
+   └─→ Create tag v1.7.0
+   │
+   ▼
+3. Auto-Sync Workflow triggers
+   │
+   ├─→ [No Conflicts] ✅
+   │   │
+   │   ├─→ Merge master → develop automatically
+   │   └─→ Develop updated within 60 seconds
+   │
+   └─→ [Conflicts Detected] ⚠️
+       │
+       ├─→ Create PR: "chore: sync develop with master"
+       ├─→ Notify maintainers
+       └─→ Manual merge required (rare)
+```
 
-   ```bash
-   git checkout develop
-   git pull origin develop
-   ```
+**For Contributors:**
 
-3. **Create your feature branch from updated develop**:
-   ```bash
-   git checkout -b feature/my-new-feature
-   ```
+Before starting new work, always pull the latest `develop`:
 
-This ensures your branch has the correct version number as a starting point. Don't worry if the version seems "old" in your branch - semantic-release will calculate the correct new version based on commits when merging to master.
+```bash
+# Pull latest develop (already synced automatically)
+git checkout develop
+git pull origin develop
+
+# Create your feature branch
+git checkout -b feature/my-new-feature
+```
+
+**Note:** 95% of the time, `develop` syncs automatically. If you see a PR titled "sync develop with master", it means manual conflict resolution is needed (maintainers handle this).
+
+Don't worry if the version seems "old" in your branch - semantic-release calculates the correct new version based on commits when merging to master.
 
 ### Submitting Contributions
 
